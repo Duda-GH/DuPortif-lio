@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&family=Titan+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sniglet", sans-serif;
+}
+
+body {
+    background-color: #DBD3D2;
+}
+
+header {
+    background-color: #F0EDEE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.logo img {
+    width: 90px;
+}
+
+.icones a {
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.icones img {
+    width: 30px;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    flex-direction: row; /* Garante que os itens dentro do main fiquem lado a lado */
+    align-items: flex-start; /* Alinha os itens no topo */
+    justify-content: center;
+    padding: 50px;
+    gap: 50px; /* Adiciona espaço entre a imagem e o texto */
+}
+
+.eu {
+    flex: 1;
+    max-width: 500px; /* Ajuste o tamanho da imagem conforme necessário */
+}
+
+.biografia {
+    flex: 2; /* Dá mais espaço para o texto */
+    max-width: 600px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.destaque {
+    color: #816F68;
+}
+
+.destaque1 {
+    color: #816F68;
+    font-style: italic;
+}
+
+.eu img {
+    border-radius: 10px;
+    width: 100%; /* Faz com que a imagem ocupe a largura do contêiner .eu */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaços indesejados abaixo da imagem */
+}
+
+footer {
+    background-color: #F0EDEE;
+    color: black;
+    text-align: center;
+    padding: 30px 20px;
+    width: 100%;
+}
+
+.texto-rodape {
+    margin-bottom: 10px;
+    font-family: "Sniglet", sans-serif;
+}
+
+.redes-sociais a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.redes-sociais img {
+    width: 30px;
+}
