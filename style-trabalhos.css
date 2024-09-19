@@ -25,9 +25,12 @@ header {
     width: 90px;
 }
 
+.icones {
+    display: flex;
+}
+
 .icones a {
     margin-left: 15px;
-    text-decoration: none;
 }
 
 .icones img {
@@ -36,27 +39,13 @@ header {
 }
 
 main {
-    display: flex;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-h1 {
-    margin: 0;
-}
-
-main {
     padding: 20px;
 }
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Aumentando a largura mínima */
+    gap: 20px; /* Espaçamento entre os itens */
 }
 
 .gallery-item {
@@ -65,13 +54,14 @@ main {
     border: 1px solid #ddd;
     border-radius: 8px;
     background: #fff;
-    height: 250px;
+    width: 100%; /* Garantindo que o item ocupe toda a largura disponível */
+    aspect-ratio: 16 / 9; /* Mantendo uma proporção desejada */
 }
 
 .gallery-item img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 100%; /* Garantindo que a imagem preencha todo o espaço do item */
+    object-fit: cover; /* Mantendo a proporção da imagem */
     display: block;
 }
 
@@ -92,6 +82,21 @@ main {
     opacity: 1;
 }
 
+.titulo, .subtitulo {
+    text-align: center; 
+    margin: 20px 0; 
+}
+
+.titulo {
+    font-size: 2.5em; 
+}
+
+.subtitulo {
+    font-size: 1.4em;
+    color: #816f68;
+    font-family: "Sniglet", sans-serif;
+    text-transform: uppercase;
+}
 
 
 footer {
@@ -99,7 +104,6 @@ footer {
     color: black;
     text-align: center;
     padding: 30px 0;
-    width: 100%;
 }
 
 .texto-rodape {
@@ -113,4 +117,31 @@ footer {
 
 .redes-sociais img {
     width: 30px;
+}
+
+@media (max-width: 600px) {
+    .icones img {
+        width: 25px;
+    }
+    
+    .gallery-item {
+        height: 200px;
+    }
+}
+
+.gallery-item video {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    border-radius: 8px; 
+    display: block;
+}
+
+.gallery-item {
+    position: relative; 
+    overflow: hidden; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    background: #fff; 
+    aspect-ratio: 16 / 9;
 }
